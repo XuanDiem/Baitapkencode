@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/..//Baitapken_code/../../Baitapken.code/.idea/bt.iml" filepath="$PROJECT_DIR$/..//Baitapken_code/../../Baitapken.code/.idea/bt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Baitapken_code.iml" filepath="$PROJECT_DIR$/.idea/Baitapken_code.iml" />
+      <module fileurl="file://D://Baitapken_code/../../Baitapken.code/.idea/bt.iml" filepath="D://Baitapken_code/../../Baitapken.code/.idea/bt.iml" />
     </modules>
   </component>
 </project>

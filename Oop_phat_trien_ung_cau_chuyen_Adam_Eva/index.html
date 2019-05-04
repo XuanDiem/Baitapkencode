@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phat trien cau chuyen Adam va Eva</title>
+</head>
+<body>
+<script>
+    let Apple = function (weight) {
+        this.weight = weight;
+        //this.status = true;
+        this.getWeight = function () {
+            return this.weight;
+        };
+
+        this.checkStatusApple = function () {
+            if (this.weight <= 0) {
+                console.log("Qua tao da het");
+            } else {
+                console.log("Qua tao van con");
+            }
+        }
+    };
+    let Human = function () {
+        this.name = '';
+        this.gender = true;
+        this.weight = 0;
+        this.say = '';
+        this.setGender = function (gender) {
+            this.gender = gender;
+        };
+        this.getGender = function () {
+            return this.gender;
+        };
+        this.checkIsMale = function () {
+            if (this.gender == true) {
+                this.gender = "isMale";
+            } else {
+                this.gender = "isFmale";
+            }
+
+        };
+        this.eatApple = function (apple) {
+            if (apple.weight > 0) {
+                apple.weight--;
+                this.weight++;
+            }
+        };
+        this.getWeight = function () {
+            return this.weight;
+
+        };
+        this.setSay = function (say) {
+            this.say = say;
+        };
+        this.getSay = function () {
+            return this.say;
+        };
+
+        this.setName = function (name) {
+            this.name = name;
+        };
+        this.getName = function () {
+            return this.name;
+        };
+    };
+    let a = new Apple(10);
+    let h = new Human();
+    console.log("khoi luong qua tao con lai la: " + a.getWeight());
+    console.log(a.checkStatusApple());
+    h.setGender(false);
+    h.checkIsMale();
+    console.log(h.getGender());
+    h.eatApple(a);
+    console.log("Khoi luong qua tao con lai la: " + a.getWeight());
+    h.eatApple(a);
+    console.log("Khoi luong qua tao con lai la: " + a.getWeight());
+    h.eatApple(a);
+    console.log("Khoi luong qua tao con lai la: " + a.getWeight());
+    h.eatApple(a);
+    console.log("Khoi luong qua tao con lai la: " + a.getWeight());
+    h.eatApple(a);
+    console.log("Khoi luong qua tao con lai la: " + a.getWeight());
+    h.eatApple(a);
+    console.log("Khoi luong qua tao con lai la: " + a.getWeight());
+    h.eatApple(a);
+    console.log("Khoi luong qua tao con lai la: " + a.getWeight());
+    h.eatApple(a);
+    console.log("Khoi luong qua tao con lai la: " + a.getWeight());
+    h.eatApple(a);
+    console.log("Khoi luong qua tao con lai la: " + a.getWeight());
+    h.eatApple(a);
+    console.log("Khoi luong qua tao con lai la: " + a.getWeight());
+    a.checkStatusApple();
+    console.log("Can nang cua nguoi an tao la : " + h.getWeight());
+    h.setSay("Ngon qua !");
+    console.log(h.getSay());
+    a.checkStatusApple();
+    h.setName("Adam");
+    console.log(h.getName());
+    h.setGender(true);
+    h.checkIsMale();
+    console.log(h.getGender());
+    h.setName("Eva");
+    console.log(h.getName());
+</script>
+</body>
+</html>

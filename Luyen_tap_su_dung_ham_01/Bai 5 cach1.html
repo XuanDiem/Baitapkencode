@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 5</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhap ten ngoi sao vao o trong");
+    let arrayOne = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let arrayTow = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    var index = 0;
+
+    function nhanThamSoDangChuoi(c) {
+        for (let i = 0; i < arrayOne.length; i++) {
+            let b = arrayOne[i];
+            if (c === b) {
+                index = i;
+                return true;
+            }
+        }
+    }
+
+    if (nhanThamSoDangChuoi(a) === true) {
+        document.write("Ngôi sao " + arrayOne[index] + " vừa nhập vào có chòm sao tương ứng tên là: "
+            + arrayTow[index]
+            + "<br/>" + "Nằm trong mảng arrayTow và có chỉ số là : " + index + "<br/>");
+    }
+</script>
+</body>
+</html>

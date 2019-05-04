@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dem so lan xuat hien cua phan tu trong mang</title>
+</head>
+<body>
+<script>
+    function sapxep(arr) {
+        arr.sort(function (a, b) {
+            return a - b;
+            //ham sap xep mang
+        })
+    }
+
+    function tim(arr, input) {
+        let lowerBound = 0;//chi so dau
+        let upperBound = arr.length - 1;//chi so cuoi
+        let position = -1; //vi tri phan tu can tim
+        while (lowerBound < upperBound) {
+            let midPoint = Math.floor((lowerBound + upperBound) / 2);//chi so giua
+            if (arr[midPoint] === input)//tim thay o vi tri giua
+            {
+                position = midPoint;
+                break;
+            } else if (arr[midPoint] < input) {//gi tri phan tu can tim lon hon gia tri giua
+                lowerBound = midPoint + 1;
+            } else {
+                upperBound = midPoint - 1;//gia tri phan tu can tim nho hon gia tri giua
+            }
+        }
+        return position;//tra ve vi tri cua phan tu can tim
+        //neu vi tri > -1 => phan tu co trong mang
+    }
+
+    function count(arr, input) {
+        let count = 0;
+        let positon = tim(arr, input);//vi tri phan tu
+        if (positon > -1) {//neu vi tri > -1 => phan tu co trong mang,it nhat 1
+            count++;
+        }
+        for (let i = positon - 1; i > 0; --i) {
+            if (arr[i] === input) {
+                ++count;
+            } else {
+                break;
+            }
+        }
+        for (let i = positon + 1; i < arr.length; ++i) {
+            if (arr[i] === input) {
+                ++count;
+            } else {
+                break;
+            }
+        }
+        return count;
+    }
+
+    let arr_nums = [];
+    for (let i = 0; i < 100; i++) {
+        arr_nums[i] = Math.floor(Math.random() * 101);
+    }
+
+    function disPlay(arr) {//hien thi phan tu trong mang
+        for (let i = 0; i < arr.length; i++) {
+            document.writeln(arr[i] + "");
+            if (i % 10 === 9) //cu 10 phan tu thi xuong dong
+            {
+                document.writeln("<br/>");
+            }
+        }
+    }
+
+    sapxep(arr_nums);
+    disPlay(arr_nums);
+    let input = parseInt(prompt("Nhap gia tri can tim"));
+    var reVal = count(arr_nums, input);
+    document.writeln("Xuat hien  " + reVal + "phan tu" + input);
+</script>
+</body>
+</html>

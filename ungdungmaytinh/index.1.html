@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Ung dung may tinh</title>
+</head>
+<body>
+<h1> Caculator </h1>
+<form>
+    <input type="text" id="number_one">
+    <input type="text" id="number_tow"><br>
+    <input type="reset" id="number_three" >
+    <button type="button" value="+" onclick="checkToantu(this.value)">Addition (+)</button>
+    <button type="button" value="-" onclick="checkToantu(this.value)">Sabtraction(-)</button>
+    <button type="button" value="*" onclick="checkToantu(this.value)">Multiplication(*)</button>
+    <button type="button" value="/" onclick="checkToantu(this.value)">Divison(/)</button>
+</form>
+<script>
+
+
+    function checkToantu(operator) {
+
+        let a = parseFloat(document.getElementById('number_one').value);
+        let b = parseFloat(document.getElementById('number_tow').value);
+
+        if (operator == '+') {
+            var result = parseFloat(a) + parseFloat(b);
+        }
+        if (operator == '-') {
+
+            var result = parseFloat(a) - parseFloat(b);
+        }
+        if (operator == "*") {
+            var result = parseFloat(a) * parseFloat(b);
+        }
+        if (operator == "/") {
+            var result = parseFloat(a) / parseFloat(b);
+        }
+        if (!a) {
+            if(!b) {
+                alert("hãy nhập số vào 2 ô trống !" + "   ");
+
+            }else {
+               alert( "hãy nhập số vào ô trống đầu tiên !" + "   ");
+            }
+
+        } else {
+            if (!b) {
+
+                alert("hãy nhập số vào ô trống thứ hai!" + "   ");
+            } else {
+               alert(result);
+            }
+        }
+
+    }
+
+
+</script>
+</body>
+</html>

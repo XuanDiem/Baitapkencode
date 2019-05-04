@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Khai_bao_va_su_dung_bien" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Kiem_tra_nam_nhuan" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/May_tinh_don_gian" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Su_kien_chuot" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Tinh_chi_so_can_nang" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/bien_kieu_du_lieu_toan_tu" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/chuyendoitiente" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/hienthiketqua2" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/khai_bao_va_su_dung_bien_" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mo_ta_thuat_toan_co_cau_truc_dieu_kien" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/su_dung_git" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/su_dung_git/sudunggit" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/su_dung_toan_tu" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ungdungmaytinh" vcs="Git" />
   </component>
 </project>

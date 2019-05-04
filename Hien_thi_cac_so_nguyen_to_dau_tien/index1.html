@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hien thi cac so nguyen to dau tien</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    let n = parseInt(prompt("Nhap so cac so nguyen dau tien can in ra"));
+
+    function checksonguyento(j) {
+        if (j < 2) {
+            return false;
+        } else {
+            for (let i = 2; i < j; i++) {
+                if (j % i == 0) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        }
+        return true;
+    }
+
+   var j = 2;
+
+    input = "Day so nguyen to la:";
+    while (count < n) {
+        if (checksonguyento(j)) {
+            input = input + j + "-";
+
+            count++;
+        }
+        j++;
+    }
+    document.write(input);
+</script>
+</body>
+</html>

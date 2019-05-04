@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xay dung lop mo ta hinh chu nhat</title>
+</head>
+<body>
+<canvas  id="MyCanvas" width="300" height="200" style="border:2px solid #1241fe;"></canvas>
+<script>
+
+
+    let Hinhchunhat = function (chieuDai, chieuRong) {
+        this.chieuDai = chieuDai;
+        this.chieuRong = chieuRong;
+
+
+        this.getDientich = function () {
+            return this.chieuDai * this.chieuRong;
+
+
+        };
+        this.getChuvi = function () {
+            return (this.chieuDai + this.chieuRong) * 2;
+
+        };
+        this.getchieuDai = function () {
+            return this.chieuDai;
+
+        };
+        this.getchieuRong = function () {
+            return this.chieuRong;
+
+        };
+
+
+    };
+    let canvas = document.getElementById("MyCanvas");
+    let ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#30ff48";
+    ctx.fillRect(80, 60, 150, 75);
+
+    let hcn = new Hinhchunhat(2, 4);
+    let dT = hcn.getDientich();
+    let cV = hcn.getChuvi();
+    let cR = hcn.getchieuRong();
+    let cD = hcn.getchieuDai();
+    document.write("<br/>" + "Chieu dai la: " + cR + "-----Chieu rong la:  " + cD + "<br/>");
+    document.write("Dien tich hinh chu nhat la : " + dT + "\n--- Chu vi hinh chu nhat la: " + cV);
+</script>
+</body>
+</html>

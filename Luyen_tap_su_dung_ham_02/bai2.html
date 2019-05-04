@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 2 tinh dien tich va chu vi </title>
+</head>
+<body>
+<script>
+    let r1=parseFloat(prompt("Nhap so ban kinh vao o"));
+    const pi=3.14159;
+
+    function tinhdientich(r) {
+        dientich=pi*r*r;
+        return dientich;
+
+
+    }
+    function tinhchuvi(r){
+        chuvi=2*pi*r;
+        return chuvi;
+    }
+    document.write("Dien tich hinh tron la :  " + tinhdientich(r1)+"</br>");
+    document.write("Chu vi hinh tron la : " +  tinhchuvi(r1));
+</script>
+</body>
+</html>

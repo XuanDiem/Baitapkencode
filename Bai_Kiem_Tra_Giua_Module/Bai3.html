@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai3</title>
+</head>
+<body>
+
+<script>
+    let year = parseFloat(prompt("Nhap so nam sinh cua ban vao day !"));
+
+    function tinhtuoi(yearOfbirth) {
+        var yearNow = new Date();
+
+        if (yearOfbirth > yearNow.getFullYear()) {
+            return false;
+        } else {
+            let yearOld = yearNow.getFullYear() - yearOfbirth;
+            return yearOld;
+        }
+
+
+    }
+
+    if (tinhtuoi(year) === false) {
+        document.write("Sorry ! Số năm lớn hơn hiện tại ! :( ");
+    } else {
+        document.write("Số tuổi của bạn là :   " + tinhtuoi(year) + " tuổi :) ");
+    }
+
+    // if ((tinhtuoi(soNam) == yearOld)) {
+    //     document.write(" So tuoi cua ban la :  " + tinhtuoi(soNam));
+    // } else if ((tinhtuoi(soNam) == false)) {
+    //     document.write("Nam sinh lon hon hien tai !!!  " + tinhtuoi(soNam));
+    // }
+
+</script>
+
+</body>
+</html>

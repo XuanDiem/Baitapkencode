@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Su dung vong lap While</title>
+</head>
+<body>
+<script>
+
+    let sum = 0;
+    let number = parseInt(prompt("Nhap so vao o so 1"));
+
+    while (number != -1) {
+        number = parseInt(prompt("Nhap so vao o ,muon dung vong lap nhap -1"));
+        document.write("so do la" + "  " + number + "<br>");
+        sum =sum+number;
+    }
+
+    document.write("Tong cac so vua nhap la " + "  " + sum);
+
+
+</script>
+</body>
+</html>

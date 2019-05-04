@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate Email</title>
+</head>
+<body>
+<input id="textIpt" placeholder="Nhap email vao o trong " size="50">
+<button id="btnPrint" onclick="submit()">Submit</button>
+<script>
+    function checkEmail(str) {
+        let email = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)$/;
+        if (email.test(str)) {
+            alert("Email hop le ^^");
+        } else {
+            alert("Email không hợp lệ \nBắt đầu bằng một ký tự\n" +
+                "Không chứa các ký tự đặc biệt\n" +
+                "Có một ký tự @ ngăn cách tên email và domain\n" +
+                "Domain phải hợp lệ");
+        }
+    }
+
+    let a = document.getElementById("textIpt").innerHTML;
+    function submit() {
+        checkEmail(a);
+    }
+
+</script>
+</body>
+</html>

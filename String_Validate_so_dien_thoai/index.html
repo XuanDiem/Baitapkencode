@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate so dien thoai</title>
+</head>
+<body>
+<script>
+    function test(str) {
+        var a = /^\([84]{2}\)*-\([0]+[0-9]{9}\)$/;
+        if (a.test(str)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    console.log(test("(84)-(0123456789)"));
+</script>
+</body>
+</html>

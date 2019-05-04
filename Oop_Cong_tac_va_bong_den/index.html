@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cong tac va bong den</title>
+</head>
+<body>
+<script>
+    let SwitchButton = function (switchOn, switchOff) {
+        this.status = true;
+        this.lamp = '';
+        this.switchOn = switchOn;
+        this.switchOff = switchOff;
+
+        this.checkStatusSwitchButton = function () {
+            if (status == true) {
+                console.log("Bong den dang bat");
+            } else {
+                console.log("Bong den da tat");
+            }
+        };
+        this.connectToLamp = function (ElectricLampOne) {
+            if (this.status == true) {
+                ElectricLampOne.statusLamp == true;
+            }
+        };
+        this.switchOff = function () {
+            this.lamp = false;
+            ElectricLamp.turnOff = this.lamp;
+        };
+        this.switchOn = function () {
+            this.lamp = true;
+            ElectricLamp.turnOn = this.lamp;
+        }
+    };
+    let ElectricLamp = function () {
+        this.statusLamp = true;
+        this.checkStatusElectricLamp = function () {
+
+            this.turnOn = "Den dang sang";
+            this.turnOff = "Den da tat";
+
+        }
+
+    };
+    let s = new SwitchButton(10,10);
+    let e = new ElectricLamp();
+    s.connectToLamp(e);
+    console.log(e.checkStatusElectricLamp());
+    console.log(s.checkStatusSwitchButton());
+    s.connectToLamp(e);
+    console.log(e.checkStatusElectricLamp());
+    console.log(s.checkStatusSwitchButton());
+</script>
+</body>
+</html>

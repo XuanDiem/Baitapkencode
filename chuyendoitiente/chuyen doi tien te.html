@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi tien te</title>
+    <h1><b>CHUYỂN ĐỔI TIỀN TỆ</b>
+    </h1>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <td>
+                <strong>Amount</strong> <br>
+                <input type="text" id="input" placeholder="Nhap so tien vao day nhe anh em!" size="50">
+            </td>
+            <td>
+                <strong>From Currency</strong><br>
+                <select id="value1">
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                </select>
+            </td>
+            <td>
+                <strong>To Currency</strong><br>
+                <select id="value2">
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                </select>
+            </td>
+            <td>
+                <br>
+                <button type="button" id="exchange" onclick="chuyenDoi()"><b>Exchange</b></button>
+            </td>
+        </tr>
+    </table>
+</form>
+<table border="1">
+    <tr>
+        <td><p id="Result"></p>
+        </td>
+    </tr>
+</table>
+<script>
+    function chuyenDoi() {
+        let a = document.getElementById("value1").value;
+        let b = document.getElementById("value2").value;
+        let c = parseFloat(document.getElementById("input").value);
+        let e = "Chuẩn rồi nhé anh em :)) Cho mình xin 1 like nhé anh em ! Thank bro ^^ :))";
+        if (a == "USD" && b == "VND") {
+            document.getElementById("Result").innerHTML = " So tien tuong duong la   "+ c * 23000 + ".VND";
+        } else if (a == "VND" && b == "USD") {
+            document.getElementById("Result").innerHTML = " So tien tuong duong la   "+ c / 23000 + ".USD";
+        } else {
+            document.getElementById("Result").innerHTML = c;
+        }
+        document.getElementById("exchange").innerHTML = e;
+
+    }
+
+
+</script>
+
+</body>
+</html>

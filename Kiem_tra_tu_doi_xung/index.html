@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra tu doi xung</title>
+</head>
+<body>
+<script>
+    function isPalindrome(s) {
+        for (let i = 0; i < s.length / 2; i++) {
+            if (s.charAt(i) != s.charAt(s.length - i - 1)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    let chuoi = prompt("Nhap chuoi ");
+    if (isPalindrome(chuoi)) {
+        alert("la chuoi doi xung");
+    } else {
+        alert("chuoi khong doi xung");
+    }
+</script>
+</body>
+</html>

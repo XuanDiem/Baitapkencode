@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="txttensp" placeholder="Nhap ten sp">
+<input type="text" id="txttenspmoi" placeholder="Nhap ten sp moi">
+<input type="button" value="Add" onclick="addsp();">
+<input type="button" value="Display" onclick="displaysp();">
+<input type="button" value="Delete" onclick="Delete();">
+<input type="button" value="Edit" onclick="edit();">
+<div id="result"></div>
+<div id="result1"></div>
+<script>
+    let arr_sp=[];
+    function addsp() {
+        let tensp=document.getElementById("txttensp").value;
+        arr_sp.push(tensp);
+        document.getElementById("txttensp").value=" ";
+        alert("Da them thanh cong");
+    }
+    function displaysp() {
+        let result=" ";
+        for (i=0;i<arr_sp.length;i++){
+            result=result+arr_sp[i]+"</br>";
+        }
+        document.getElementById('result').innerHTML=result;
+
+    }
+    function Delete() {
+        let result=document.getElementById('txttensp').value;
+        if (arr_sp.indexOf(result)!== -1){
+            arr_sp.splice(arr_sp.indexOf(result),1);
+            alert("Xoa San Pham Thanh Cong");
+        } else {
+            alert("Ten san pham khong hop le");
+        }
+    }
+    function edit() {
+        let result=document.getElementById('txttensp').value;
+        let result1=document.getElementById('txttenspmoi').value;
+        if (arr_sp.indexOf(result)!==-1){
+            arr_sp[arr_sp.indexOf(result)]=result1;
+            alert("Sua san pham thanh cong");
+        } else {
+            alert("Sua san pham that bai");
+        }
+    }
+</script>
+</body>
+</html>

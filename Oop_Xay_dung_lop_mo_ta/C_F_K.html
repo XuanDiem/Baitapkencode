@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xay dung lop mo ta Temperature</title>
+</head>
+<body>
+<script>
+
+    let Temperature = function (C) {
+
+        this.C = C;
+        this.getC = function () {
+            return this.C;
+        };
+        this.getF = function () {
+            return (this.C * 9 / 5 + 32);
+        };
+        this.getK = function () {
+            return this.C + 273.15;
+        };
+    };
+
+    let tem = new Temperature(25);
+    let c = tem.getC();
+    let f = tem.getF();
+    let k = tem.getK();
+    document.write("<br/>" + "Độ C là : " + c + "<br/>");
+    document.write("Độ F là : " + f + "<br/>");
+    document.write("Độ K là : " + k);
+
+</script>
+
+</body>
+</html>

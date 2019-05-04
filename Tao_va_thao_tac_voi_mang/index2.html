@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Tao va thao tac voi mang </title>
+</head>
+<body>
+<form>
+<input type="text" id="value" placeholder="Nhap so vao day">
+<input type="button" value="Add" id="btadd" onclick="buttonadd();">
+<input type="button" value="Display" id="btdisplay" onclick="buttondisplay();">
+<input type="reset" >
+<div id="result"></div>
+</form>
+<script>
+    var x = 0;
+    var mang = [];
+
+    function buttonadd() {
+        mang[x] = document.getElementById("value").value;
+        //console.log(mang);
+        alert("Phan tu la:" + mang[x] + " ______  " + "Chi so phan tu vua them vao la" + x);
+        x++;
+        document.getElementById("value").value = "";
+
+    }
+
+    function buttondisplay() {
+        let e = "<hr/>";
+        for (let i = 0; i < mang.length; i++) {
+            e += "Element " + i + " = " + mang[i] + "<br/>";
+        }
+        document.getElementById("result").innerHTML = e;
+    }
+
+</script>
+</body>
+</html>

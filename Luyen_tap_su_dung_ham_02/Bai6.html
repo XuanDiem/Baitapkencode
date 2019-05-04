@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhap vao 1 so ,kiem tra so do la so nguyen duong khong</title>
+</head>
+<body>
+<input type="text" id="nhapvao" placeholder="Nhap so vao o trong" size="50px">
+<button type="button" id="themvao" onclick="add()">Add</button>
+<button type="button" id="check" onclick="kiemtrasonguyenduong()">Kiemtrasonguyenduong</button>
+<button type="button" id="print" onclick="printmang()">Printmang</button>
+
+<script>
+    let Array = [];
+
+    function add() {
+        a = document.getElementById("nhapvao").value;
+        Array.push(a);
+        document.getElementById("nhapvao").value = " ";
+    }
+
+    function timsonguyenduong(number) {
+        for (let index = 0; index < number.length; index++) {
+            if (number[index] % 1 == 0 && number[index] > 0) {
+                return true;
+            }
+        }
+        return false;
+
+
+    }
+
+    function kiemtrasonguyenduong() {
+        if ((timsonguyenduong(Array)==true)) {
+            document.write("So vua them vao la so nguyen duong");
+        } else {
+            document.write("So vua them vao khong la so nguyen duong");
+        }
+
+
+    }
+
+    function printmang() {
+
+        Array.reverse();
+        document.write(Array);
+
+    }
+
+
+</script>
+</body>
+</html>

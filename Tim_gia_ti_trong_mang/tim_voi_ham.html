@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test tim gia tri trong mang</title>
+</head>
+<body>
+<script>
+    let number1 = parseFloat(prompt("Nhap so vao "));
+    let x = [-1, 2, 5, 7, 9, 15];
+    let i = 0;
+
+    function Timgiatri(number) {
+        for (let i = 0; i < x.length; i++) {
+            if (number == x[i]) {
+                return "So nay nam trong mang x";
+                break;
+            }
+        }
+        if (number !== x[i]) {
+            return "So nay khong nam trong mang x";
+        }
+
+    }
+
+    document.write(Timgiatri(number1));
+</script>
+</body>
+</html>

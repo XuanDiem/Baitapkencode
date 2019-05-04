@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In ra 20 so nguyen to dau tien</title>
+</head>
+<body>
+<input type="text" id="nhapvao" placeholder="Nhap vao o trong" size="50px">
+<button type="button" id="inra" onclick="print1()">Print</button>
+<script>
+
+    let count = 0;
+
+    function checksonguyento(number) {
+        if (number < 2) {
+            return false;
+        } else {
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    function print1() {
+        let n = parseFloat(document.getElementById("nhapvao").value);
+        let j = 2;
+        while (count < n) {
+            if ((checksonguyento(j) === true)) {
+                document.write("  " + j);
+                count++;
+            }
+            console.log(checksonguyento(j));
+            j++;
+        }
+
+    }
+</script>
+</body>
+</html>

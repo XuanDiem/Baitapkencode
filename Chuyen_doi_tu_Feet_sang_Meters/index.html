@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>CHuyen doi tu Feet sang meters</title>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <br>
+            <td>
+                <br>
+                <input type="text" id="nhapvao" placeholder="nhap so vao day">
+            </td>
+            <td>
+                <strong>From Lenght</strong><br>
+                <select id="value1">
+                    <option value="Feet">Feet</option>
+                    <option value="Meters">Meters</option>
+                </select>
+            </td>
+            <td>
+                <strong>To Lenght</strong><br>
+                <select id="value2">
+                    <option value="Feet">Feet</option>
+                    <option value="Meters">Meters</option>
+                </select>
+            </td>
+            <td>
+                <br>
+                <button type="button" id="chuyendoi1" onclick="chuyendoi()"><b>Chuyendoi</b></button>
+            </td>
+
+            <td>
+                <br>
+
+
+            <td>
+                <br>
+
+                <p type="text" id="ketqua">Ket qua la: </p>
+            </td>
+
+
+            </td>
+        </tr>
+
+    </table>
+</form>
+<script>
+    function chuyendoi() {
+        let a = document.getElementById("value1").value;
+        let b = document.getElementById("value2").value;
+        let c = parseFloat(document.getElementById("nhapvao").value);
+        let e = "Chuẩn rồi nhé anh em :)) Cho mình xin 1 like nhé anh em ! Thank bro ^^ :))";
+        if (a == "Feet" && b == "Meters") {
+            document.getElementById("ketqua").innerHTML = " Độ dài là :  " + c * (3279 / 1000) + "   Meters";
+        } else if (a == "Meters" && b == "Feet") {
+            document.getElementById("ketqua").innerHTML = " Độ dài là:  " + c * (305 / 1000) + "   Feet";
+        } else {
+            document.getElementById("ketqua").innerHTML = c;
+        }
+        document.getElementById("chuyendoi1").innerHTML = e;
+    }
+</script>
+</body>
+</html>

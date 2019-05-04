@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt("Nhap so thu nhat vao o trong"));
+    let b = parseFloat(prompt("Nhap so thu hai vao o trong"));
+
+    function nhapHaiThamSo(numberOne, numberTow) {
+        if (numberOne > numberTow) {
+            alert("So thu nhat lon hon so thu hai");
+        } else if (numberOne <= numberTow) {
+            let sum = numberOne + numberTow;
+            alert("Tong cua 2 so nhap vao la: " + sum);
+        }
+    }
+
+    document.write(nhapHaiThamSo(a, b));
+</script>
+</body>
+</html>

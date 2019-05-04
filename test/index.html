@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="PrintName()">check me</button>
+<input type="text" id="txtIpt">
+<script>
+    function PrintName() {
+        let a = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let b = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        let d = document.getElementById("txtIpt").value;
+        let index = 0;
+        for (let i = 0; i < a.length; i++) {
+            if (d === a[i]) {
+                document.write(a[i]+index);
+                index = i;
+                for (let j = 0; j < b.length; j++) {
+                    if (index === b[j]) {
+                        document.write(b[j]);
+                    }
+                }
+            } else {
+                return "Khong tim thay ten";
+            }
+        }
+    }
+
+
+</script>
+</body>
+
+</html>

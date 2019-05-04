@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai1</title>
+</head>
+<body>
+<script>
+    function date(namsinh) {
+        this.namsinh = namsinh;
+        let d = new Date();
+        this.getnam = function () {
+            return d.getFullYear() - this.namsinh;
+        }
+    }
+
+    let namsinh = parseInt(prompt("Nhap nam sinh cua ban :"));
+    let dd = new date(namsinh);
+    let nam = dd.getnam();
+    let thang = nam * 12;
+    let ngay = thang * 30;
+    let gio = ngay * 24;
+    let phut = gio * 60;
+    let giay = phut * 60;
+    console.log("Toi da song " + nam + " nam");
+    console.log("Toi da song " + thang + " thang");
+    console.log("Toi da song " + ngay + " ngay");
+    console.log("Toi da song " + gio + " gio");
+    console.log("Toi da song " + phut + " phut");
+    console.log("Toi da song " + giay + " giay");
+</script>
+</body>
+</html>

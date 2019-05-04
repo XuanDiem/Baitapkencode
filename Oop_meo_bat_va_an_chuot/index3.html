@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meo bat va an chuot</title>
+</head>
+<body>
+<script>
+    let Rat = function (name, weight, speed) {
+        this.name = name;
+        this.weight = weight;
+        this.speed = speed;
+        this.status = true;
+        this.say = '';
+
+        this.checkStatusRat = function () {
+            if (this.status) {
+                console.log("Chuot van con song");
+            } else {
+                console.log("Chuot da chet");
+            }
+
+        };
+        this.checkWeightRat = function () {
+            if (this.weight <= 0) {
+                console.log("Meo da an het chuot");
+            } else {
+                console.log("Meo chua an het chuot");
+            }
+        };
+        this.setSay = function (say) {
+            this.say = say;
+        };
+        this.getSay = function () {
+            return this.say;
+        };
+    };
+    let Cat = function (name, weight, speed1) {
+        this.name = name;
+        this.weight = weight;
+        this.speed = speed1;
+        this.say = '';
+
+        this.getWeight = function () {
+            return this.weight;
+        };
+        this.getSpeed1 = function () {
+            return this.speed;
+        };
+
+        this.huting = function (Rat) {
+            if (this.speed > Rat.speed) {
+                console.log("Meo da bat dc chuot");
+                Rat.status = false;
+                this.eat(Rat);
+            } else {
+                console.log("Meo chua bat duoc chuot");
+            }
+        };
+        this.eat = function (Rat) {
+            if (Rat.status && Rat.weight > 0) {
+
+                this.weight = this.weight + Rat.weight;
+                console.log("an");
+            } else {
+                console.log("k an");
+            }
+
+        };
+        this.setSay = function (say) {
+            this.say = say;
+        };
+        this.getSay = function () {
+            return this.say;
+        };
+    };
+    let rat1 = new Rat("chuot", 20, 10, true);
+    let cat1 = new Cat("meo", 30, 5);
+    rat1.checkStatusRat();
+    cat1.huting(rat1);
+    cat1.eat(rat1);
+    console.log();
+    cat1.setSay("Meo meo");
+    console.log(cat1.getSay());
+
+
+</script>
+</body>
+</html>

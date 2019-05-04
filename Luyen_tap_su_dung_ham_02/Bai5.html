@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhap 3 so nguyen , tim so nho nhat</title>
+</head>
+<body>
+<input type="text" id="nhapvao" placeholder="Nhập số vào ô">
+<button type="button" id="themvao" onclick="Add()">Add</button>
+<button type="button" id="checkmin" onclick="Check()">Checkmin</button>
+<button type="button" id="inra" onclick="inra()">PrintArray</button>
+<script>
+
+    let array = [];
+
+    function Add() {
+        let a = document.getElementById("nhapvao").value;
+        array.push(a);
+        document.getElementById("nhapvao").value = "";
+        document.getElementById("themvao").innerHTML = ("Add tiếp đi bạn ơi ^^ !");
+    }
+
+    function findmin(arr1) {
+        let min = arr1[0];
+        for (let index = 1; index < arr1.length; index++) {
+            if (arr1[index] < min) {
+                min = arr1[index];
+            }
+        }
+        return min;
+    }
+
+    function Check() {
+        document.getElementById("checkmin").innerHTML = ("So nho nhat la :   " + findmin(array));
+
+    }
+
+    function inra() {
+        document.write(array);
+
+    }
+
+</script>
+</body>
+</html>

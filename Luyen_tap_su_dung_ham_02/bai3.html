@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai3 Tinh giai thua</title>
+</head>
+<body>
+<script>
+    let number1 = parseFloat(prompt("Nhap so vao o"));
+    let giaithua = 1;
+
+    function tinhgiaithua(number) {
+        if (number == 0 || number == 1) {
+            return 1;
+        } else {
+            for (let i = 2; i <= number; i++) {
+                giaithua *= i;
+
+            }
+        }
+        return giaithua;
+
+    }
+
+    document.write("Giai thua cua   " + number1 + "  la  :" + tinhgiaithua(number1));
+
+</script>
+</body>
+</html>

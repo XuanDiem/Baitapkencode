@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Rat = function (name, weight, speed, status) {
+        this.name = name;
+        this.weight = weight;
+        this.speed = speed;
+        this.status = status;
+        this.say = function () {
+            console.log("chit chit");
+            return this.say;
+        };
+        this.checkStatus = function () {
+            if (this.status) {
+                console.log("chuột sống");
+            } else {
+                console.log("chuột chết")
+            }
+        };
+        this.getName = function () {
+            return this.name;
+        };
+        this.setName = function (new_name) {
+            this.name = new_name;
+        };
+        this.getWeight = function () {
+            return this.weight;
+        };
+        this.setWeight = function (new_weight) {
+            this.weight = new_weight;
+        };
+        this.getSpeed = function () {
+            return this.speed;
+        };
+        this.setSpeed = function (new_speed) {
+            this.speed = new_speed;
+        };
+    };
+    let Cat = function (name, weight, speedMax) {
+        this.name = name;
+        this.weight = weight;
+        this.speedMax = speedMax;
+        this.say = function () {
+            console.log("meo meo");
+            return this.say;
+        };
+        this.huting = function (Rat) {
+            if (this.speedMax > Rat.speed) {
+                console.log("bắt được chuột");
+                this.eat(Rat);
+            } else {
+                console.log("không bắt được chuột");
+            }
+        };
+        this.eat = function (Rat) {
+            if (Rat.status) {
+                this.weight = this.weight + Rat.weight;
+                console.log("ăn")
+            } else {
+                console.log("không ăn")
+            }
+        };
+        this.getName = function () {
+            return this.name;
+        };
+        this.setName = function (new_name) {
+            this.name = new_name;
+        };
+        this.getWeight = function () {
+            return this.weight;
+        };
+        this.setWeight = function (new_weight) {
+            this.weight = new_weight;
+        };
+        this.getSpeedMax = function () {
+            return this.speedMax
+        };
+        this.setSpeedMax = function (new_speedMax) {
+            this.speedMax = new_speedMax;
+        };
+    };
+
+
+    let Rat1 = new Rat("chuột", 10, 10, true);
+    let Cat1 = new Cat("mèo", 30, 40);
+    Rat1.checkStatus();
+    Cat1.getWeight();
+    Cat1.huting(Rat1);
+    console.log(Rat1);
+    console.log("cân nặng của mèo sau khi ăn là : " + Cat1.getWeight());
+</script>
+</body>
+</html>

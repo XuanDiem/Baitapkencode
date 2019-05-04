@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate Account</title>
+</head>
+<body>
+<input type="text" id="textIpt" placeholder="Nhap tai khoan vao o trong" size="50">
+<button id="btnPrint" onclick="submit()">Submit</button>
+<script>
+    function checkAccount(str) {
+        let regexp = /^[_a-z0-9]{6,}$/;
+        if (regexp.test(str)) {
+            alert("Tai khoan hop le ^^");
+        } else {
+            alert("Tai khoan khong hop le\n" +
+                "Không chứa các ký tự đặc biệt\n" +
+                "Ít nhất là 6 ký tự\n" +
+                "Không chứa các ký tự viết hoa\n" +
+                "Cho phép dấu gạch dưới (_)")
+        }
+    }
+
+    let a = document.getElementById("textIpt").innerHTML;
+
+    function submit() {
+        checkAccount(a);
+    }
+</script>
+</body>
+</html>

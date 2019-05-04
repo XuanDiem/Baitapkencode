@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai4</title>
+</head>
+<body>
+<script>
+    function kt(ktt) {
+        var test1 = /^([0]{5}\d{4})[\-](\d{3})[\-](\d{2})$/;
+        if (test1.test(ktt)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    let string = prompt("Nhap chuoi :");
+    console.log(kt(string));
+</script>
+</body>
+</html>

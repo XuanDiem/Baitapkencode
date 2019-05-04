@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    let n = parseInt(prompt("Nhap so cac so nguyen to dau tien can in ra"));
+
+    function checksonguyento(number) {
+        if (number < 2) {
+            return false;
+        } else {
+            for (let i = 2; i < number; i++) {
+                if (number % i == 0) {
+                    return false;
+                }
+            }
+        }
+        return true ;
+    }
+
+    let j = 2;
+    while (count < n) {
+        if (checksonguyento(j)==true) {
+            document.write("  " + j + "</br>");
+            count++;
+        }
+        console.log(checksonguyento(j));
+        j++;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oop Mèo ăn thịt Chuột</title>
+    <img src="meoChuot.jpg" alt="Hình ảnh mèo và chuột"/>
+</head>
+<body>
+<script>
+    function Rat(name, weight, speed, status) {
+        this.name = name;
+        this.weight = weight;
+        this.speed = speed;
+        this.say = "";
+        this.status = status;
+        this.setSay = function (say) {
+            this.say = say;
+        };
+        this.getSay = function () {
+            return this.say;
+        };
+        this.setName = function (name) {
+            this.name = name;
+        };
+        this.getName = function (name) {
+            return this.name;
+        };
+        this.setWeight = function (weight) {
+            this.weight = weight;
+        };
+        this.getWeight = function () {
+            return this.weight;
+        };
+        this.setSpeed = function (speed) {
+            this.speed = speed;
+        };
+        this.getSpeed = function () {
+            return this.speed;
+        };
+        this.checkStatusRat = function () {
+            if (this.status) {
+                console.log("Chuột vẫn còn sống ^^ :)");
+            } else {
+                console.log("Chuột đã chết :( ");
+            }
+        }
+    }
+
+    function Cat(name, weight, speed) {
+        this.name = name;
+        this.weight = weight;
+        this.speed = speed;
+        this.say = "";
+        this.status = true;
+        this.setSay = function (say) {
+            this.say = say;
+        };
+        this.getSay = function () {
+            return this.say;
+        };
+        this.setName = function (name) {
+            this.name = name;
+        };
+        this.getName = function () {
+            return this.name;
+        };
+        this.setWeight = function (weight) {
+            this.weight = weight;
+        };
+        this.getWeight = function () {
+            return this.weight;
+        };
+        this.setSpeed = function (speed) {
+            this.speed = speed;
+        };
+        this.getSpeed = function () {
+            return this.speed;
+        };
+        this.catchRat = function (Mouse) {
+            if (this.speed > Mouse.speed) {
+                console.log("Mèo đã bắt được chuột :)");
+                this.status = true;
+            } else {
+                console.log("Mèo không đuổi được chuột vì tốc độ méo chậm hơn chuột :(");
+            }
+        };
+        this.eatRat = function (Mouse) {
+            if (this.status && Mouse.status) {
+                console.log("Mèo đã bắt được chuột và đang ăn thịt chuột :)(:");
+                Mouse.status = false;
+                this.weight += Mouse.weight;
+                console.log(Mouse.weight = 0 + "---Chuột đã chết :(");
+                //Có thể mèo ăn chuột từng miếng một.Thì dùng lệnh sau :
+                // this.weight++;
+                // Mouse.weight--;
+            } else {
+                console.log("Mèo chưa đuổi được chuột hoặc mèo,chuột đã chết :(")
+            }
+        };
+        this.checkStatusCat = function () {
+            if (this.status) {
+                console.log("Mèo vẫn còn sống ^^");
+            } else {
+                console.log("Mèo đã chết rồi :(");
+            }
+        }
+    }
+
+    let rat = new Rat("Jerry", 10, 20, true);
+    let cat = new Cat("Tom", 20, 30);
+    rat.setSay('"Chit chit"');
+    console.log("Chuột kêu: " + rat.getSay() + "\n--Tên của chuột là: " + rat.getName() + "\n--Trọng lượng của chuột là: " +
+        rat.getWeight() + "\n--Tốc độ của chuột là : " + rat.getSpeed());
+    cat.setSay('"Meo Meo"');
+    console.log("Mèo kêu: " + cat.getSay() + "\n--Tên của Mèo là: " + cat.getName() + "\n--Trọng lượng của Mèo là: "
+        + cat.getWeight() + "\n--Tốc độ của Mèo là : " + cat.getSpeed());
+    rat.checkStatusRat();
+    cat.checkStatusCat();
+    cat.catchRat(rat);
+    cat.eatRat(rat);
+    rat.checkStatusRat();
+    console.log("Trọng lượng của Mèo sau khi ăn thịt chuột là: " + cat.getWeight());
+    console.log("Trọng lượng của chuột sau khi bị mèo ăn là:  " + rat.getWeight());
+
+</script>
+</body>
+</html>

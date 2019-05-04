@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game doan so</title>
+</head>
+<body>
+<script>
+    function doanso(arr, data) {
+        for (i = 0; i < arr.length; i++) {
+            if (arr[i] === data) {
+                console.log("So " + data + " co xuat hien trong mang");
+                break;
+            } else {
+                console.log("So" + data + "khong xuat hien trong mang");
+            }
+        }
+    }
+
+    function sapxep(arr) {//sap xep mang
+        arr.sort(function (a, b) {
+            return a - b;
+        })
+    }
+
+    function Display(arr) {//hien thi mang
+        for (i = 0; i < arr.length; i++) {
+            document.write(arr[i] + "-");
+            if (i % 10 === 9) {
+                document.writeln("</br>");
+            }
+        }
+    }
+
+    let arr_doanso = [];
+    for (i = 0; i < 100; i++) {
+        arr_doanso[i] = Math.floor(Math.random() * 100);
+    }
+    sapxep(arr_doanso);
+    Display(arr_doanso);
+    let so = parseInt(prompt("Nhap so ban doan"));
+    let doanso1 = doanso(arr_doanso, so);
+</script>
+</body>
+</html>

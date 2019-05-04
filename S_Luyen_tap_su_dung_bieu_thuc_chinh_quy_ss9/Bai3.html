@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai3</title>
+</head>
+<body>
+<script>
+    function kiemtraNguyenAmvaPhuAm(str) {
+        this.demNguyenam = 0;
+        this.demPhuam = 0;
+        this.cach = 0;
+        for (let i = 0; i < str.length; i++) {
+            if (str.charAt(i) === "u" || str.charAt(i) === "e" || str.charAt(i) === "o" || str.charAt(i) === "a"
+                || str.charAt(i) === "i") {
+                this.demNguyenam++;
+            } else if (str.charAt(i) === " ") {
+                this.cach++;
+            } else {
+                this.demPhuam++;
+            }
+        }
+    }
+
+    let string = prompt("Nhap chuoi :");
+    let kt = new kiemtraNguyenAmvaPhuAm(string);
+    console.log("So nguyen am la: " + kt.demNguyenam + "So phu am la " + kt.demPhuam);
+</script>
+</body>
+</html>

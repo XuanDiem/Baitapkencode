@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai6</title>
+</head>
+<body>
+<script>
+    let a = "Toi yeu ngon ngu lap trinh Javascrip,PHP,Java,Python. ";
+    let dem = 0;
+    for (let i = 0; i < a.length; i++) {
+        if (a.charAt(i) === "a") {
+            dem++;
+        }
+    }
+    document.writeln("So lan xuat hien ky tu a la :  " + dem + '</br>');
+    let arr_string = a.split(" ");
+    document.writeln("so tu trong chuoi la : " + arr_string.length + '</br>');
+    document.writeln("chuoi truoc khi thay the la : " + a + "<br/>");
+    let chuoimoi = a.replace("Javascrip", "Typescript");
+    document.writeln("chuoi sau khi thay the la : " + chuoimoi);
+</script>
+</body>
+</html>

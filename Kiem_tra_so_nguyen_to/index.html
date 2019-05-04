@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kien Tra</title>
+</head>
+<body>
+<script>
+    let number1=parseInt(prompt("Nhap so vao o trong"));
+
+    function kiemtrasont(number) {
+        if (number < 2) {
+            return false;
+        } else {
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
+                   return false;
+                }
+            }
+
+        }
+        return true;
+    }
+    if(kiemtrasont(number1)===true){
+        document.write(number1+":  La so nguyen to  ");
+    }else {
+        document.write(number1+":  Khong la so nguyen to");
+    }
+
+</script>
+</body>
+</html>

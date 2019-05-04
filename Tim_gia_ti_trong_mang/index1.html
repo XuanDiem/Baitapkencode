@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim gia tri trong mang</title>
+</head>
+<body>
+<script>
+
+    let number = parseFloat(prompt("Nhap so vao "));
+    let x = [-1, 5, 7, 3, 9, 2, 18];
+    let index;
+    for (index = 0; index < x.length; index++) {
+        if (number == x[index]) {
+            document.write(number + ":   So nay nam trong mang x" + " ;  Co chi so la:  " + index);
+            break;
+        }
+    }
+    if (number !== x[index]) {
+        document.write(number + "   : So nay khong nam trong mang x");
+    }
+
+
+</script>
+</body>
+</html>

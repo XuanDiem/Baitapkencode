@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai2</title>
+</head>
+<body>
+<script>
+    function songaunhien(sobatdau, soketthuc) {
+        this.sobatdau = sobatdau;
+        this.soketthuc = soketthuc;
+        this.numberRandom = function () {
+            let numberRandom = Math.floor(Math.random() * (this.soketthuc - this.sobatdau) + this.sobatdau);
+            return numberRandom;
+        }
+    }
+
+    let batdau = parseInt(prompt("So bat dau: "));
+    let ketthuc = parseInt(prompt("So ket thuc: "));
+    let songaunhien1 = new songaunhien(batdau, ketthuc);
+    console.log(songaunhien1.numberRandom());
+</script>
+</body>
+</html>

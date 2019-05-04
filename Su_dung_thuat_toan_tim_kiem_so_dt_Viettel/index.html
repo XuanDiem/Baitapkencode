@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let test1 = /^([0][3])\d{8}$/;
+    let arr_sdt = [];
+    for (let i = 0; i < 3; i++) {
+        arr_sdt[i] = (prompt("nhap so dien thoai  " + i));
+    }
+    let result = "Day so dien thoai";
+
+    function kiemtraSDT(arr) {
+        for (let i = 0; i < arr_sdt.length; i++) {
+            result = result + arr_sdt[i] + " ; ";
+            if (test1.exec(arr_sdt[i])) {
+                document.write("so dien thoai " + arr_sdt[i] + " la mang viettel " + "<br/>");
+            } else {
+                {
+                    document.write("so dien thoai " + arr_sdt[i] + " khong phai la mang viettel " + "<br/>");
+                }
+            }
+        }
+    }
+
+    console.log(kiemtraSDT(arr_sdt));
+</script>
+</body>
+</html>

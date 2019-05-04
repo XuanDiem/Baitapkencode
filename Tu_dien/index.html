@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu Dien</title>
+</head>
+<body>
+<h1>Tu dien Robin Diem</h1>
+<input type="text" id="input">
+<input type="button" onclick="search();" value="Tim kiem">
+<div id="result"></div>
+<script>
+    var arr_ta = ['numberone', 'numbertow', 'numberthree', 'numberfour'];
+    var arr_tv = ['so mot', 'so hai', 'so ba', 'so bon'];
+
+    function search() {
+        let a = document.getElementById('input').value;
+
+        for (let i = 0; i < arr_ta.length; i++) {
+
+            if (arr_ta[i] === a) {
+                document.getElementById('result').innerHTML = ("Nghia tieng Viet la :" + arr_tv[i]);
+                break;
+            } else {
+                document.getElementById('result').innerHTML = ("Tu nay khong co trong tu dien Robin Diem");
+            }
+        }
+    }
+
+</script>
+</body>

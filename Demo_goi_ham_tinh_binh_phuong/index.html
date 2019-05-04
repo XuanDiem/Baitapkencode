@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Cach tao ham</title>
+</head>
+<body>
+<input type="text" placeholder="Nhap so vao o trong" id="nhapvao" oninput="nhapso();">
+<output id="ketqua"></output>
+<script>
+
+    function square(so) {
+        var result = so + so;
+        return result;
+    }
+
+    function nhapso() {
+        var nhapVao = document.getElementById("nhapvao").value;
+        var ketQua = square(nhapVao);
+        document.getElementById("ketqua").innerHTML = ketQua;
+
+    }
+
+
+</script>
+</body>
+</html>

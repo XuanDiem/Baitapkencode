@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    let a = 1;
+    let b = 2;
+    let c = 3;
+    let ketqua;
+
+    if (a == b) {
+        if (a == c) {
+            ketqua = "a bang b va c";
+        } else {
+            ketqua = "a bang b";
+        }
+    } else {
+        if (a == c) {
+            ketqua = "a bang c";
+        } else {
+            if (b == c) {
+                ketqua = "b bang c";
+            } else {
+                ketqua = "a khac b va c";
+            }
+        }
+    }
+
+
+    document.write("ket qua la :" + " " + ketqua);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remote Control Television</title>
+</head>
+<body>
+<script>
+    function Remote(change, volume) {
+        this.change = change;
+        this.volume = volume;
+        this.status = false;
+        this.setChange = function (change) {
+            if (this.status === true) {
+                this.change = change;
+            } else {
+                console.log("Remote chua duoc bat");
+            }
+        };
+        this.getchange = function () {
+            return this.change;
+        };
+        this.setvolume = function (volume) {
+            if (this.status === true) {
+                this.volume = volume;
+            } else {
+                console.log("Remote chua duoc bat");
+            }
+        };
+        this.getVolume = function () {
+            return this.volume;
+        };
+        this.turnOn = function () {
+            this.status = true;
+        };
+        this.turnOff = function () {
+            this.status = false;
+        };
+        this.checkRemote = function () {
+            if (this.status === true) {
+                console.log("Dieu khien da duoc bat");
+            } else {
+                console.log("Dieu khien chua duoc bat");
+            }
+        }
+    }
+
+    function Television(change, volume) {
+        this.change = change;
+        this.volume = volume;
+        this.status = false;
+        this.setChange = function (change) {
+            this.change = change;
+        };
+        this.getchange = function () {
+            if (this.status === true) {
+                return this.change;
+            } else {
+                console.log("Television chua duoc bat");
+            }
+        };
+        this.setvolume = function (volume) {
+            this.volume = volume;
+        };
+        this.getVolume = function () {
+            if (this.status === true) {
+                return this.volume;
+            } else {
+                console.log("Television chua duoc bat");
+            }
+        };
+        this.connectRemote = function (Remote) {
+            if (this.status === true) {
+                this.change = Remote.change;
+                this.volume = Remote.volume;
+            } else {
+                console.log("Television chua duoc bat");
+            }
+        };
+        this.connectStatus = function (Remote) {
+            this.status = Remote.status;
+        };
+        this.checkTelevision = function () {
+            if (this.status === true) {
+                console.log("Television da duoc bat");
+            } else {
+                console.log("Television chua duoc bat");
+            }
+        }
+    }
+
+    let remote = new Remote(3, 10);
+    let television = new Television();
+    television.setChange(3);
+    console.log(television.getchange());
+    television.setvolume(6);
+    console.log(television.getVolume());
+    remote.turnOn();
+    television.connectStatus(remote);
+    television.checkTelevision();
+    television.setChange(3);
+    console.log(television.getchange());
+    remote.setChange(4);
+    television.connectRemote(remote);
+    console.log(television.getchange());
+    remote.turnOff();
+    television.connectStatus(remote);
+    television.getchange();
+</script>
+</body>
+</html>
